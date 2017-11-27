@@ -13,7 +13,7 @@ class Triangle
   def kind
     array = [@length_1, @length_2, @length_3]
     sorted = array.sort
-    if array.include?(0)
+    if array.any? do |x| x <=0 end
       begin
         raise TriangleError
       end
